@@ -16,34 +16,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   </div>
 
     <div class="col-7 bg-secondary alig-content-center">
-      <h2>My CD Collection</h2>
-
-
-      <table border="3" border-color="black">
-        <tr bgcolor="red">
-          <th colspan="5" style="text-align:center;">
-            <xsl:value-of select="tema[@id='Estudio Analitico de una funcion']/titulo" />
-          </th>
-        </tr>
-        <tr bgcolor="#9acd32">
-          <th style="text-align:center">Title</th>
-          <th style="text-align:center">Teorico</th>
-          <th style="text-align:center">herramienta</th>
-          <th style="text-align:center">idPractico_Y_Demostracion</th>
-        </tr>
-
-
-        <xsl:for-each select="tema[@id='Estudio Analitico de una funcion']/subtema">
-          <tr>
-            <td><xsl:value-of select="titulo" /></td>
-            <td><xsl:value-of select="teorico" /></td>
-            <td><xsl:value-of select="herramienta" /></td>
-            <td><xsl:value-of select="practico" /></td>
-          </tr>
+      
+        <xsl:for-each select="tema">
+          <div class="bg-danger my-3 pb-1">
+            <h1 class="d-flex align-items-center justify-content-center"><xsl:value-of select="titulo" /></h1>
+            <xsl:for-each select="subtema">
+              <div class="bg-info my-1 mx-1">
+                <p><xsl:value-of select="titulo" /></p>
+                <p><xsl:value-of select="teorico" /></p>
+              </div>
+            </xsl:for-each>
+          </div>
         </xsl:for-each>
-        
-      </table>
+
     </div>
+
+   
 
 
     <div class="col bg-info" id="divDerecho">
