@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<materia>
-    <grado>
+
+<math>
+    <grado id="1">
         <tema id="Estudio Analitico de una funcion">
-            <titulo>Titulo de Tema</titulo>
+            <titulo>Titulo de Tema1</titulo>
             <subtema>
                 <titulo>Titulo de subTema1</titulo>
                 <teorico>Teorico</teorico>
@@ -23,7 +24,7 @@
             </subtema>
         </tema>
         <tema>
-            <titulo>Titulo de Tema</titulo>
+            <titulo>Titulo de Tema2</titulo>
             <subtema>
                 <titulo>Titulo de subTema2</titulo>
                 <teorico>Teorico</teorico>
@@ -72,4 +73,4 @@
                 <src id="nombreArchivo">nombreArchivo.txt</src>
         </practicos_y_demostraciones>   
     </grado>
-</materia>
+</math>

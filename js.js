@@ -9,7 +9,7 @@ function loadXMLDoc(filename)
         xhttp = new XMLHttpRequest();
     }
     
-    xhttp.open("GET", filename, false);
+    xhttp.open("GET", filename+"?v=HolaMundo", false);
     try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
     
     xhttp.send("");
@@ -37,5 +37,6 @@ function displayResult(XML, XSL)
 }
 
 function loadRESULT() {
-    displayResult("conocimiento.xml","xMath.xsl");
+    //Pedir el valor de un botón o select para elegir archivo respectivo al grado. En xsl sólo cambia la id del transform
+    displayResult("Math.xml","MATEMATICAS/xMath6.xsl");
 }

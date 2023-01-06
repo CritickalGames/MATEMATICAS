@@ -3,16 +3,19 @@
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:template match="/materia/grado">
 
-  <div class="rol py-5 bg-success"></div>
+
+<xsl:template match="/math/grado[@id='1']">
+
 
   <div class="row">
-    <div class="col bg-dark"/>
+  <div class="col-2 bg-dark" id="divIzquierdo">
+    <xsl:for-each select="tema">
+      <a><xsl:value-of select="titulo" /></a><br/>
+    </xsl:for-each>
+  </div>
 
-
-
-    <div class="col bg-secondary">
+    <div class="col-7 bg-secondary alig-content-center">
       <h2>My CD Collection</h2>
 
 
@@ -43,10 +46,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </div>
 
 
-    <div class="col bg-info"/>
+    <div class="col bg-info" id="divDerecho">
+      <xsl:for-each select="tema/subtema">
+        <a><xsl:value-of select="herramienta" /></a><br/>
+      </xsl:for-each>
+    </div>
   </div>
-  <div class="row bg-primary" id ="div"/>
-  
 
 </xsl:template>
 
