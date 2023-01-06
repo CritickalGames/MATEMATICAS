@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cursos>
+  <materia>
+    <gardo>
+        <tema>
+            <titulo>Estudio Analitico de una función</titulo>
+            <subTema>
+                <titulo>Paso Uno</titulo>
+                <teorico>Teorico</teorico>
+                <herramienta>herramienta</herramienta>
+                <practico>idPractico_Y_Demostracion</practico>
+            </subTema>
+            <subTema>
+                <titulo>Paso Dos</titulo>
+                <teorico>Teorico</teorico>
+                <herramienta>herramienta</herramienta>
+                <practico>idPractico_Y_Demostracion</practico>
+            </subTema>
+            <subTema>
+                <titulo>Paso Tres</titulo>
+                <teorico>Teorico</teorico>
+                <herramienta>herramienta</herramienta>
+                <practico>idPractico_Y_Demostracion</practico>
+            </subTema>
+            <subTema>
+                <titulo>Paso Cuatro</titulo>
+                <teorico>Teorico</teorico>
+                <herramienta>herramienta</herramienta>
+                <practico>idPractico_Y_Demostracion</practico>
+            </subTema>
+            <subTema>
+                <titulo>Paso Cinco</titulo>
+                <teorico>Teorico</teorico>
+                <herramienta>herramienta</herramienta>
+                <practico>idPractico_Y_Demostracion</practico>
+            </subTema>
+            <subTema>
+                <titulo>Paso Seis</titulo>
+                <teorico>Teorico</teorico>
+                <herramienta>herramienta</herramienta>
+                <practico>idPractico_Y_Demostracion</practico>
+            </subTema>
+        </tema>
+
+       <herramientas>
+            <teoremas>
+                <titulo>Nombres</titulo>
+                <hipotesis>Nombres</hipotesis>
+                <teoria>Nombres</teoria>
+                <demostracion>Columbia</demostracion>
+                <practico>idPractico_Y_Demostracion</practico>
+            </teoremas>
+
+            <axiomas>
+                <titulo>Nombres</titulo>
+                <explicacion>Implica Máximo y Mínimo absoluto</explicacion>
+                <demostracion>idPractico_Y_Demostracion</demostracion>
+            </axiomas>
+
+            <terminos>
+                <titulo>Function continua</titulo>
+                <explicacion>Implica Máximo y Mínimo absoluto</explicacion>
+                <demostracion>idPractico_Y_Demostracion</demostracion>
+                <apendices>Máximo y Mínimo absoluto</apendices>            
+            </terminos>
+
+       </herramientas>
+
+       <practicos_y_demostraciones>
+            <src id="nombreArchivo">nombreArchivo.txt</src>
+       </practicos_y_demostraciones>
+        
+    </gardo>
+        
+  </materia>
+  
+</cursos>

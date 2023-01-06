@@ -37,5 +37,5 @@ function displayResult(XML, XSL)
 }
 
 function loadRESULT() {
-    displayResult("xml.xml","xsl.xsl");
+    displayResult("conocimiento.xml","xMath.xsl");
 }
