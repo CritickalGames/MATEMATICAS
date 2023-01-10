@@ -38,5 +38,7 @@ function displayResult(XML, XSL)
 
 function loadRESULT() {
     //Pedir el valor de un botón o select para elegir archivo respectivo al grado. En xsl sólo cambia la id del transform
+    //displayResult("ex.xml","ex.xsl");
     displayResult("Math.xml","MATEMATICAS/xMath6.xsl");
+
 }
