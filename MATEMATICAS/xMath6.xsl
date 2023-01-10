@@ -5,11 +5,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
 
-<xsl:template match="/math/grado[@id='1']">
+<xsl:template match="/math/grado">
 
 
   <div class="row">
-  <div class="col-2 bg-dark" id="divIzquierdo">
+  <div class="col-2 mt-2 bg-dark" id="divIzquierdo">
     <!--ForEach-->
     <xsl:for-each select="tema">
       <a><xsl:value-of select="titulo" /></a><br/>
@@ -17,52 +17,55 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   </div>
   <!--Cambio de div-->
   <div class="col-7 bg-secondary alig-content-center">
-    
-      <!--ForEach-->
-      <xsl:for-each select="tema">
-        <div class="bg-danger my-3 pb-1">
-          <h1 class="d-flex align-items-center justify-content-center">
-            <xsl:value-of select="titulo" />
-          </h1>
+    <h1 class="d-flex align-items-center justify-content-center">
+      Grado <xsl:value-of select="titulo" />
+    </h1>
 
+    <!--ForEach-->
+    <xsl:for-each select="tema">
+      <div class="bg-danger my-3 pb-1">
+        <h1 class="d-flex align-items-center justify-content-center">
+          <xsl:value-of select="titulo" />
+        </h1>
+
+        <!--ForEach-->
+        <xsl:for-each select="subtema">
+          <div class="bg-info my-1 mx-1">
+            <p><xsl:value-of select="titulo" /></p>
+            <p><xsl:value-of select="teorico" /></p>
+          </div>
           <!--ForEach-->
-          <xsl:for-each select="subtema">
-            <div class="bg-info my-1 mx-1">
-              <p><xsl:value-of select="titulo" /></p>
-              <p><xsl:value-of select="teorico" /></p>
+          <xsl:for-each select="ejercicios/demostracion">
+            <div class="bg-warning my-1 mx-1">
+              <h3><xsl:value-of select="letra" /></h3>
+              <xsl:for-each select="pasos/paso">
+                  <p><xsl:value-of select="." /></p>
+              </xsl:for-each>
             </div>
-            <!--ForEach-->
-            <xsl:for-each select="ejercicios/demostracion">
-              <div class="bg-warning my-1 mx-1">
-                <h3><xsl:value-of select="letra" /></h3>
-                <xsl:for-each select="pasos/paso">
-                    <p><xsl:value-of select="." /></p>
-                </xsl:for-each>
-              </div>
-            </xsl:for-each>
-            <!--ForEach-->
-            <xsl:for-each select="ejercicios/practicos/practico">
-              <div class="bg-warning my-1 mx-1">
-                <h3><xsl:value-of select="letra" /></h3>
-                <xsl:for-each select="paso">
-                    <p><xsl:value-of select="." /></p>
-                </xsl:for-each>
-              </div>
-            </xsl:for-each>
-            
           </xsl:for-each>
-
+          <!--ForEach-->
+          <xsl:for-each select="ejercicios/practicos/practico">
+            <div class="bg-warning my-1 mx-1">
+              <h3><xsl:value-of select="letra" /></h3>
+              <xsl:for-each select="paso">
+                  <p><xsl:value-of select="." /></p>
+              </xsl:for-each>
+            </div>
+          </xsl:for-each>
           
+        </xsl:for-each>
+
         
-        </div>
-      </xsl:for-each>
+      
+      </div>
+    </xsl:for-each>
   </div>
 
    
     <!--Cambio de div-->
 
 
-    <div class="col bg-info" id="divDerecho">
+    <div class="col mt-2 bg-info" id="divDerecho">
       <!--ForEach-->
       <xsl:for-each select="tema">
         <h6><xsl:value-of select="titulo" /></h6>
